@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/api/auth/register",
+        "https://job-portal-capstone.onrender.com/api/auth/register",
         formData,
       );
       login(data);

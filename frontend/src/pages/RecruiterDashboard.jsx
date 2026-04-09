@@ -12,7 +12,7 @@ const RecruiterDashboard = () => {
       try {
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
         const { data } = await axios.get(
-          "http://localhost:3000/api/jobs/recruiter/my-jobs",
+          "https://job-portal-capstone.onrender.com/api/jobs/recruiter/my-jobs",
           config,
         );
         setJobs(data);

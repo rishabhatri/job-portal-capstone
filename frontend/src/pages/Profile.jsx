@@ -31,7 +31,7 @@ const Profile = () => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:3000/api/upload",
+        "https://job-portal-capstone.onrender.com/api/upload",
         formData,
         config,
       );
@@ -81,7 +81,7 @@ const Profile = () => {
           <p>
             <strong>Current Resume:</strong>
             <a
-              href={`http://localhost:3000${user.resume}`}
+              href={`https://job-portal-capstone.onrender.com${user.resume}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{

@@ -14,7 +14,7 @@ const Login = () => {
     try {
       // Your backend runs on port 3000
       const { data } = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        "https://job-portal-capstone.onrender.com/api/auth/login",
         { email, password },
       );
       login(data);

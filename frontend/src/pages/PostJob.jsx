@@ -27,7 +27,11 @@ const PostJob = () => {
         ...formData,
         skillsRequired: formData.skillsRequired.split(","),
       };
-      await axios.post("http://localhost:3000/api/jobs", jobData, config);
+      await axios.post(
+        "https://job-portal-capstone.onrender.com/api/jobs",
+        jobData,
+        config,
+      );
       navigate("/dashboard");
     } catch (error) {
       alert("Error posting job");

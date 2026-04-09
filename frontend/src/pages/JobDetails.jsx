@@ -11,7 +11,9 @@ const JobDetails = () => {
 
   useEffect(() => {
     const fetchJob = async () => {
-      const { data } = await axios.get(`http://localhost:3000/api/jobs/${id}`);
+      const { data } = await axios.get(
+        `https://job-portal-capstone.onrender.com/api/jobs/${id}`,
+      );
       setJob(data);
     };
     fetchJob();
@@ -24,7 +26,7 @@ const JobDetails = () => {
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
       await axios.post(
-        `http://localhost:3000/api/applications/job/${id}/apply`,
+        `https://job-portal-capstone.onrender.com/api/applications/job/${id}/apply`,
         {},
         config,
       );

@@ -13,7 +13,7 @@ const Applicants = () => {
       try {
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
         const { data } = await axios.get(
-          `http://localhost:3000/api/applications/job/${jobId}`,
+          `https://job-portal-capstone.onrender.com/api/applications/job/${jobId}`,
           config,
         );
         setApplicants(data);
@@ -28,7 +28,7 @@ const Applicants = () => {
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
       await axios.put(
-        `http://localhost:3000/api/applications/${applicationId}/status`,
+        `https://job-portal-capstone.onrender.com/api/applications/${applicationId}/status`,
         { status: newStatus },
         config,
       );
@@ -77,7 +77,7 @@ const Applicants = () => {
               {/* VIEW RESUME BUTTON */}
               {app.resume && app.resume !== "placeholder_resume_url" ? (
                 <a
-                  href={`http://localhost:3000${app.resume}`}
+                  href={`https://job-portal-capstone.onrender.com${app.resume}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"

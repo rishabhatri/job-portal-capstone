@@ -11,7 +11,9 @@ const Home = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/api/jobs");
+        const { data } = await axios.get(
+          "https://job-portal-capstone.onrender.com/api/jobs",
+        );
         setJobs(data);
         setLoading(false);
       } catch (error) {

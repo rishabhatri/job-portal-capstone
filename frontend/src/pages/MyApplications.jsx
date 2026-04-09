@@ -11,7 +11,7 @@ const MyApplications = () => {
       try {
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
         const { data } = await axios.get(
-          "http://localhost:3000/api/applications/my-applications",
+          "https://job-portal-capstone.onrender.com/api/applications/my-applications",
           config,
         );
         setApplications(data);
